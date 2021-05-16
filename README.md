@@ -75,5 +75,24 @@ To start training process run this command in /darknet folder.
 Afte a few hours I took my yolov4-tiny-custom_best.weights to my computer because I want to use it in system.The results are :
 ![Alt Text](https://github.com/dgkngzlr/mask_detection/blob/main/chart.png?raw=true)
 
+# How to use ?
+If you complete GPU requeriments so you can use Yolov4Tiny.py file which includes Model class to use trained model appropreitly. If you dont want to use GPU please set "model.USE_GPU = False". You can use model wtih "from YolovTiny import Model" . There is an basic example to usage :
+
+if __name__ == "__main__":
+    img = cv2.imread("./test_images/image7.jpg")
+    model = Model("./model/yolov4-tiny-custom_best.weights","./model/yolov4-tiny-custom.cfg","./model/obj.names")
+    model.load_yolo()
+    boxes, confidences, classIDs, idxs = model.make_prediction(img)
+    print(boxes,confidences,classIDs)
+    img = model.draw_bounding_boxes(img,boxes,confidences,classIDs,idxs)
+    
+    cv2.imshow("window",img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+If you want to use it with webcam , it is also available. Please run webcam.py file . You can find it above.
+
 # Referances
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan tortor posuere ac ut consequat semper. Elementum pulvinar etiam non quam lacus suspendisse. Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Ultricies integer quis auctor elit sed vulputate mi. Amet justo donec enim diam vulputate. Et malesuada fames ac turpis egestas sed tempus. Morbi enim nunc faucibus a pellentesque sit. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris. Risus at ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Amet porttitor eget dolor morbi non arcu risus. Auctor neque vitae tempus quam pellentesque. Consequat id porta nibh venenatis cras. Nibh cras pulvinar mattis nunc. Imperdiet massa tincidunt nunc pulvinar sapien. At auctor urna nunc id. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Condimentum mattis pellentesque id nibh tortor id aliquet lectus proin. Massa tincidunt nunc pulvinar sapien et.
+* https://github.com/techzizou/
+* https://github.com/AlexeyAB/
+* https://pjreddie.com/darknet/yolo/
