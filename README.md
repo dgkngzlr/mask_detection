@@ -68,7 +68,7 @@ Now edit options in Yolov v4 Tiny Config File :
 *    change [filters=255] to filters=(classes + 5)x3 in the 2 [convolutional] before each [yolo] layer, keep in mind that it only has to be the last              [convolutional] before each of the [yolo] layers. So if classes=1 then it should be filters=18. If classes=2 then write filters=21.
 
 It was taken from https://github.com/techzizou/yolov4-custom_Training. Please check this web site.
-To start training process run this command in /darknet folder.
+To start training process run this command in /darknet folder:
  * !./darknet detector train data/obj.data cfg/yolov4-tiny-custom.cfg yolov4-tiny.conv.29 -dont_show -map
 
 # Conclude
