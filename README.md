@@ -78,6 +78,7 @@ Afte a few hours I took my yolov4-tiny-custom_best.weights to my computer becaus
 # How to use ?
 If you complete GPU requeriments so you can use Yolov4Tiny.py file which includes Model class to use trained model appropreitly. If you dont want to use GPU please set "model.USE_GPU = False". You can use model wtih "from YolovTiny import Model" . There is an basic example to usage :
 
+```python
 if __name__ == "__main__":
     img = cv2.imread("./test_images/image7.jpg")
     model = Model("./model/yolov4-tiny-custom_best.weights","./model/yolov4-tiny-custom.cfg","./model/obj.names")
@@ -89,6 +90,8 @@ if __name__ == "__main__":
     cv2.imshow("window",img)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
+```
+
 
 If you want to use it with webcam , it is also available. Please run webcam.py file . You can find it above.
 
