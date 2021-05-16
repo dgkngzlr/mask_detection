@@ -73,10 +73,11 @@ To start training process run this command in /darknet folder:
 
 # Conclude
 Afte a few hours I took my yolov4-tiny-custom_best.weights to my computer because I want to use it in my system.The results are :
+
 ![Alt Text](https://github.com/dgkngzlr/mask_detection/blob/main/chart.png?raw=true)
 
 # How to use ?
-If you complete GPU requeriments so you can use Yolov4Tiny.py file which includes Model class to use trained model appropreitly. If you dont want to use GPU please set "model.USE_GPU = False". You can use model wtih "from YolovTiny import Model" . There is an basic example to usage :
+If you complete GPU requeriments so you can use Yolov4Tiny.py file which includes Model class to use trained model appropreitly. If you dont want to use GPU please set "model.USE_GPU = False". You can use model wtih "from YolovTiny import Model" . There is a basic example to usage :
 
 ```python
 if __name__ == "__main__":
