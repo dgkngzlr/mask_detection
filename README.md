@@ -72,7 +72,7 @@ To start training process run this command in /darknet folder:
  * !./darknet detector train data/obj.data cfg/yolov4-tiny-custom.cfg yolov4-tiny.conv.29 -dont_show -map
 
 # Conclude
-Afte a few hours I took my yolov4-tiny-custom_best.weights to my computer because I want to use it in system.The results are :
+Afte a few hours I took my yolov4-tiny-custom_best.weights to my computer because I want to use it in my system.The results are :
 ![Alt Text](https://github.com/dgkngzlr/mask_detection/blob/main/chart.png?raw=true)
 
 # How to use ?
