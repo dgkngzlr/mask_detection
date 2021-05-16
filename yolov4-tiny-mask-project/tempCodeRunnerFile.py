@@ -1,0 +1,1 @@
+img = model.draw_bounding_boxes(img,boxes,confidences,classIDs,idxs)
