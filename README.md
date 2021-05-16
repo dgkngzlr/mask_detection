@@ -11,14 +11,14 @@ Performing mask detection with Yolo v4 Tiny due to the pandemic situation.
 * [Referances](#referances)
 
 
-# requirements
+# Requirements
 
-# pre-trained-models
+# Pre-trained-models
 
-# overview
+# Overview
 
-# performing-the-task
+# Performing-the-task
 
-# conclude
+# Conclude
 
-# referances
+# Referances
