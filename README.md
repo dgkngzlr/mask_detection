@@ -51,11 +51,13 @@ These requirements are necessarily for GPU computing.
 
 # Pre trained models
 There are weights-file for different cfg-files. So please check https://github.com/AlexeyAB/darknet. But I used Yolov v4 Tiny pre trained model for this project you may use other yolo version but I did not try them. We will train it our custom data later.
-* Yolov v4 Tiny Pre-trained model --> https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.weights
-* Yolov v4 Tiny Config File --> https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4-tiny.cfg
+* Yolov v4 Tiny Pre-trained model :
+* https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.weights
+* Yolov v4 Tiny Config File :
+* https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4-tiny.cfg
 
 # Performing the task
-I used Google Colab to train pre-trained yolv4_tiny model with our custom data-set.Please check this article https://medium.com/analytics-vidhya/yolov4-vs-yolov4-tiny-97932b6ec8ec and you can also find the data set here https://www.kaggle.com/techzizou/labeled-mask-dataset-yolo-darknet.Also you should create obj.names and obj.data according to dataset and number of classes in darknet/data folder .And I share my colab notebook with you so you can follow this article from there. https://colab.research.google.com/drive/1IQ9BMGSG5pKSTe4gqxwS9zk42pKq8LAW?usp=sharing . If you want to create own data set you can use labelIMG program. Before start training run process.py file in /darknet folder to create train.txt and test.txt in darknet/data folder.
+I used Google Colab to train pre-trained yolv4_tiny model with our custom data-set.Please check this article https://medium.com/analytics-vidhya/yolov4-vs-yolov4-tiny-97932b6ec8ec and you can also find the data set here https://www.kaggle.com/techzizou/labeled-mask-dataset-yolo-darknet. Also you should create obj.names and obj.data according to dataset and number of classes in darknet/data folder .And I share my colab notebook with you so you can follow this article from there. https://colab.research.google.com/drive/1IQ9BMGSG5pKSTe4gqxwS9zk42pKq8LAW?usp=sharing . If you want to create own data set you can use labelIMG program. Before start training run process.py file in /darknet folder to create train.txt and test.txt in darknet/data folder.
 Now edit options in Yolov v4 Tiny Config File :
 *   change line batch to batch=64
 *   change line subdivisions to subdivisions=16
@@ -71,6 +73,7 @@ To start training process run this command in /darknet folder.
 
 # Conclude
 Afte a few hours I took my yolov4-tiny-custom_best.weights to my computer because I want to use it in system.The results are :
+![Alt Text](https://github.com/dgkngzlr/mask_detection/blob/main/mask.gif?raw=true)
 
 # Referances
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan tortor posuere ac ut consequat semper. Elementum pulvinar etiam non quam lacus suspendisse. Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Ultricies integer quis auctor elit sed vulputate mi. Amet justo donec enim diam vulputate. Et malesuada fames ac turpis egestas sed tempus. Morbi enim nunc faucibus a pellentesque sit. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris. Risus at ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Amet porttitor eget dolor morbi non arcu risus. Auctor neque vitae tempus quam pellentesque. Consequat id porta nibh venenatis cras. Nibh cras pulvinar mattis nunc. Imperdiet massa tincidunt nunc pulvinar sapien. At auctor urna nunc id. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Condimentum mattis pellentesque id nibh tortor id aliquet lectus proin. Massa tincidunt nunc pulvinar sapien et.
