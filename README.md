@@ -23,23 +23,23 @@ My system specs :
 * CUDA --> 11.0
 
 If you want to a real time system you should use GPU boosting. For GPU boosting you also should install CUDA,Cudnn and OpenCV from source. You can benefit from Cmake program to built OpenCV from source. Please check these options before built it :
-    -CMAKE_BUILD_TYPE=RELEASE \
-    -CMAKE_INSTALL_PREFIX=/usr/local \
-    -INSTALL_C_EXAMPLES=ON \
-    -INSTALL_PYTHON_EXAMPLES=ON \
-    -OPENCV_GENERATE_PKGCONFIG=ON \
-    -OPENCV_EXTRA_MODULES_PATH= PATH_TO_OPENCV_CONTRIB \
-    -BUILD_EXAMPLES=ON
-    -with_cuda=ON
-    -with_cudnn=ON
-    -with_cublas=ON
-    -OPENCV_DNN_CUDA=ON
-    -build_opencv_world=ON
-    -cuda_arch_bin=6.1 # compute capability it may changes to system
-    -OPENCV_ENABLE_NONFREE=ON
-    -ENABLE_FAST_MATH=1
-    -CUDA_FAST_MATH=1
-    -HAVE_opencv_python3=ON
+   * -CMAKE_BUILD_TYPE=RELEASE \
+   * -CMAKE_INSTALL_PREFIX=/usr/local \
+   * -INSTALL_C_EXAMPLES=ON \
+   * -INSTALL_PYTHON_EXAMPLES=ON \
+   * -OPENCV_GENERATE_PKGCONFIG=ON \
+   * -OPENCV_EXTRA_MODULES_PATH= PATH_TO_OPENCV_CONTRIB \
+   * -BUILD_EXAMPLES=ON
+   * -with_cuda=ON
+   * -with_cudnn=ON
+   * -with_cublas=ON
+   * -OPENCV_DNN_CUDA=ON
+   * -build_opencv_world=ON
+   * -cuda_arch_bin=6.1 # compute capability it may changes to system
+   * -OPENCV_ENABLE_NONFREE=ON
+   * -ENABLE_FAST_MATH=1
+   * -CUDA_FAST_MATH=1
+   * -HAVE_opencv_python3=ON
  
  Breifly:
  * 1-) Install CUDA
