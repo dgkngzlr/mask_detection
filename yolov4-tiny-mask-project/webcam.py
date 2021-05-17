@@ -6,8 +6,9 @@ import cv2
 cap = cv2.VideoCapture(0)
 
 model = Model("./model/yolov4-tiny-custom_best.weights","./model/yolov4-tiny-custom.cfg","./model/obj.names")
-model.load_yolo()
 model.USE_GPU = True
+model.load_yolo()
+
 
 while(True):
     # Capture frame-by-frame
