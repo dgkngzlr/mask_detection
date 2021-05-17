@@ -31,10 +31,12 @@ class Model:
         self.net = cv2.dnn.readNet(self.WEIGHTS_PATH, self.CONFIG_PATH)  # load YOLO algorithm.
         
         if self.USE_GPU:
-            print('Using GPU')
             self.net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
             self.net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
+            print('Using GPU')
         else:
+            self.net.setPreferableBackend(cv2.dnn.DNN_BACKEND_DEFAULT)
+            self.net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
             print('Using CPU')
         
         self.layer_names = self.net.getLayerNames()
